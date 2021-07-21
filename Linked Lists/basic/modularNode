@@ -1,0 +1,15 @@
+int modularNode(Node* head, int k)
+{
+    if(head==NULL || k<=0) return -1;
+    int nr=-1;
+	int i=0;
+	struct Node* current=head;
+	while(current!=NULL){
+	    i++;
+	    if(i%k==0) {
+	        nr=current->data;
+	    }
+	    current=current->next;
+	}
+  return nr;
+}
