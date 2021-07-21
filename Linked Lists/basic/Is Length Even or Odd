@@ -1,0 +1,14 @@
+// Function should return 0 is length is even else return 1
+int isLengthEvenOrOdd(struct Node* head)
+{
+     //Code here
+     int x=0;
+     Node* current = head;
+     while(current!=NULL)
+     {
+         x++;
+         current=current->next;
+     }
+     if(x%2==0) return 0;
+     return 1;
+}
