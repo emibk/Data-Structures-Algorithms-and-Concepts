@@ -1,0 +1,24 @@
+int sumOfLastN_Nodes(struct Node* head, int n)
+{
+      // Code here
+      int m=0;
+      struct Node* current=head;
+      while(current!=NULL)
+      {
+          m++;
+          current=current->next;
+      }
+      struct Node* current1=head;
+      int i=0;
+      int suma=0;
+      while(current1!=NULL)
+      {
+          i++;
+         if(i>m-n){
+         suma=suma+current1->data;
+             
+         }
+         current1=current1->next;
+      }
+      return suma;
+}
