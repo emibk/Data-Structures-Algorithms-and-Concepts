@@ -1,0 +1,21 @@
+int fractional_node(struct Node *head, int k)
+{
+    // your code here
+    int n=0;
+    struct Node* current=head;
+    while(current){
+        n++;
+        current=current->next;
+    }
+    current=head;
+    if(n%k==0){
+    for(int i=1;i<n/k;i++){
+        current=current->next;
+    }}
+    else{
+        for(int i=1;i<n/k+1;i++){
+        current=current->next;
+    }
+    }
+    return current->data;
+}
